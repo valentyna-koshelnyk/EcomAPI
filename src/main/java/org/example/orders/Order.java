@@ -1,6 +1,6 @@
-package main.java.dev.ecom.orders;
+package org.example.orders;
 
-import main.java.dev.ecom.products.Product;
+import java.sql.Date;
 
 public class Order {
     int id;
@@ -13,11 +13,11 @@ public class Order {
         this.id = id;
     }
 
-    public Product getProductId() {
+    public int getProductId() {
         return productId;
     }
 
-    public void setProductId(Product productId) {
+    public void setProductId(int productId) {
         this.productId = productId;
     }
 
@@ -37,13 +37,19 @@ public class Order {
         this.customerDetails = customerDetails;
     }
 
-    Product productId;
+    int productId;
     int quantity;
     String customerDetails;
-    public Order(int id, Product productId, int quantity, String customerDetails) {
+    Date date;
+
+    public Order() {
+    }
+
+    public Order(int id, int productId, int quantity, String customerDetails, Date date) {
         this.id = id;
         this.productId = productId;
         this.quantity = quantity;
         this.customerDetails = customerDetails;
+        this.date = date;
     }
 }

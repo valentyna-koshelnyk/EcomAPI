@@ -1,4 +1,4 @@
-package main.java.dev.ecom.products;
+package org.example.products;
 
 
 import javax.ws.rs.*;
@@ -42,5 +42,21 @@ public class ProductResource {
         public void deleteProduct(@PathParam("id") int id) {
             productDao.deleteProduct(id);
         }
+
+    @GET
+    @Path("/filter/category")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Product> filterByCategory(@QueryParam("category") String category) {
+        return productDao.filterByCategory(category);
+    }
+
+    @GET
+    @Path("/filter/price")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Product> filterByPrice(
+            @QueryParam("minPrice") int minPrice,
+            @QueryParam("maxPrice") int maxPrice) {
+        return productDao.filterByPrice(minPrice, maxPrice);
+    }
     }
 

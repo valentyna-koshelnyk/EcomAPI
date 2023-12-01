@@ -1,4 +1,4 @@
-package main.java.dev.ecom.utils;
+package org.example.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

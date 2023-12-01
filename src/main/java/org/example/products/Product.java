@@ -1,7 +1,7 @@
-package main.java.dev.ecom.products;
+package org.example.products;
 
 public class Product {
-
+int id;
     int productId;
     String name;
     double price;
@@ -14,6 +14,9 @@ public class Product {
         this.price = price;
         this.category = category;
         this.stockQuantity = stockQuantity;
+    }
+
+    public Product() {
     }
 
     public int getProductId() {

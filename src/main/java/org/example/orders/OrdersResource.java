@@ -1,4 +1,4 @@
-package main.java.dev.ecom.orders;
+package org.example.orders;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
